@@ -1,0 +1,18 @@
+<h1>From Parent To Child</h1>
+<div>
+    <table border="" style="text-align: center;">
+        <th>Sl.No</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Place</th>
+
+        <tr *ngFor="let i of nice;let j=index">
+            <td>{{j+1}}</td>
+            <td> <img src="{{i.src}}" alt="" height="100px"></td>
+            <td>{{i.name}}</td>
+            <td>{{i.place}}</td>
+        </tr>
+    </table>
+
+    <button (click)="transfer()">Sending data to parent</button>
+</div>
