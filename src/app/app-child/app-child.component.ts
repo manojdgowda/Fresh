@@ -52,6 +52,9 @@ export class AppChildComponent {
       this.store=data
     })
   }
+  
+ u:boolean=false;
+
 
 
 }

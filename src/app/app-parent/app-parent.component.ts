@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
+import { ParentServiceService } from './parent-service.service';
 
 @Component({
   selector: 'app-app-parent',
@@ -43,6 +44,13 @@ export class AppParentComponent {
     this.store=data
   }
 
-d=''
+d='';
+e:any
+
+constructor(private service:ParentServiceService){}
+ngOnInit():void{
+  this.e=this.service.n
+}
+
 
 }

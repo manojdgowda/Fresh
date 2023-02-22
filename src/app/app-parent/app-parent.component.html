@@ -1,6 +1,8 @@
 <!-- <input type="text" name="" id="" [(ngModel)]="d">
 <div>{{d}}</div> -->
 
+<h1>Parent</h1>
+
 <table class="table" border="" style="text-align: center;">
     <tr >
         <th>Sl No.</th>
@@ -54,4 +56,15 @@
 </table>
 
 
+<H1>Service</H1>
+<table border="" class="table">
+    <tr *ngFor="let i of e">
+        <td><img src="{{i.src}}" alt="" height="100px"></td>
+        <td>{{i.name}}</td>
+        <td>{{i.place}}</td>
+    </tr>
+</table>
 
+
+
+<button (click)="h()"> C</button>
