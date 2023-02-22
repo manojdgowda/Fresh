@@ -36,12 +36,13 @@ export class AppParentComponent {
     this.c=data
   }
 
+
   store:any;
-  
+
   fake(data){
     this.store=data
   }
 
-
+d=''
 
 }
