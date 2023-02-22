@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppParentComponent {
 
-
   a=[
     {    
       src:'https://cdn.pixabay.com/photo/2023/01/23/17/41/hut-7739262__340.jpg',
@@ -32,25 +31,17 @@ export class AppParentComponent {
 
     
   ]
+  c=[];
+  fromchild(data){
+    this.c=data
+  }
+
+  store:any;
+  
+  fake(data){
+    this.store=data
+  }
 
 
-  data!: string;
-
-// get(event:any){
-//  this.data=event
-// }
-
-
-man='Manoj D'
-
-ma=[];
-
-
-
-
-
-pa(data){
-  this.ma=data;
-}
 
 }

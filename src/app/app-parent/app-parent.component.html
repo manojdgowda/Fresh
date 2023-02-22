@@ -1,6 +1,6 @@
 
 
-<table class="table" border="   " style="text-align: center;">
+<table class="table" border="" style="text-align: center;">
     <tr >
         <th>Sl No.</th>
         <th>Image</th>
@@ -14,15 +14,43 @@
         <td>{{ i.name}}</td>
         <td>{{ i.place}}</td>
         <br>
-    </tr>
+ 
+</table>
 
-    <tr *ngFor="let o of ma;let h=index ">
-        <td>{{h+5}}</td>
-        <td><img src="{{o.src}}" alt="" height="100px"></td>
-        <td>{{o.name}} </td>
-        <td>{{o.place}}</td>
+
+<app-app-child [parent]="a" (child)="fromchild($event)" (child1)="fake($event)"></app-app-child>
+
+<table border="" style="text-align: center; width: 100%;">
+    <tr >
+        <th>Sl No.</th>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Place</th>
+    </tr>
+    <tr *ngFor="let i of c;let j=index">
+        <td>{{j+1}}</td>
+        <td> <img src="{{i.src}}" alt="" height="100px"></td>
+        <td>{{i.name}}</td>
+        <td>{{i.place}}</td>
+
     </tr>
 </table>
-<h1>Manoj</h1>
-<app-app-child [nice]="a" (parent)="pa($event)"></app-app-child>
+<br>
+<table border="" style="text-align: center; width: 100%;">
+    <tr >
+        <!-- <th>Sl No.</th> -->
+        <th>Id</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let i of store;let j=index" style="padding:10px ;">
+        <!-- <td>{{j+1}}</td> -->
+        <td> {{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.price}}</td>
+
+    </tr>
+</table>
+
+
 

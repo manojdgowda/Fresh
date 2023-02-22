@@ -1,4 +1,5 @@
 import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-app-child',
@@ -8,12 +9,8 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
 export class AppChildComponent {
 
 
-  @Input() nice
 
-  @Output() parent=new EventEmitter<any>
-
-
-  a=[
+  b=[
     {    
       src:'https://cdn.pixabay.com/photo/2023/01/23/17/41/hut-7739262__340.jpg',
       name:'Beach',
@@ -34,15 +31,27 @@ export class AppChildComponent {
       name:'Kaveri',
       place:'Talakadu'
     },
-
-    
   ]
 
+  @Input() parent;
+  @Output() child=new EventEmitter<any>;
+  @Output() child1=new EventEmitter<any>;
 
-  transfer(){
-    this.parent.emit(this.a);
+  magic(){
+    this.child.emit(this.b)
   }
 
+  fake(){
+    this.child1.emit(this.store)
+  }
+
+  constructor(private http:HttpClient){}
+  store:any;
+  fakeapi(){
+    this.http.get('https://fakestoreapi.com/products?limit=5').subscribe((data)=>{
+      this.store=data
+    })
+  }
 
 
 }

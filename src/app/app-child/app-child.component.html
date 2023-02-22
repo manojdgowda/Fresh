@@ -1,18 +1,36 @@
-<h1>From Parent To Child</h1>
-<div>
-    <table border="" style="text-align: center;">
+<h1>Parent to Child</h1>
+<table border="" style="border-collapse: collapse;" class="table1">
+    <tr>
         <th>Sl.No</th>
         <th>Image</th>
         <th>Name</th>
         <th>Place</th>
+    </tr>
+    <tr *ngFor="let i of parent;let g=index">
+        <td>{{g+1}}</td>
+        <td><img src="{{i.src}}" alt="" height="100px"></td>
+        <td>{{i.name}}</td>
+        <td>{{i.place}}</td>
+    </tr>
+    
+</table>
 
-        <tr *ngFor="let i of nice;let j=index">
-            <td>{{j+1}}</td>
-            <td> <img src="{{i.src}}" alt="" height="100px"></td>
-            <td>{{i.name}}</td>
-            <td>{{i.place}}</td>
-        </tr>
-    </table>
 
-    <button (click)="transfer()">Sending data to parent</button>
-</div>
+<h1>Child</h1> <span><button (click)="fakeapi()">Fake</button></span>
+
+
+<table border="">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let i of store">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.price}}</td>
+    </tr>
+</table>
+<h1>Child to Parent</h1>
+
+<button (click)="magic()" style="margin: 10px;"  (click)="fake()">Click to see the magic</button>
