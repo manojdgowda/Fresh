@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component ,OnInit} from '@angular/core';
 import { ParentServiceService } from './parent-service.service';
 
@@ -48,7 +49,7 @@ d='';
 e:any;
 f:any;
 
-constructor(private service:ParentServiceService){}
+constructor(private service:ParentServiceService ){}
 // ngOnInit():void{
 //   this.e=this.service.n
 // }
@@ -58,6 +59,7 @@ constructor(private service:ParentServiceService){}
 ngOnInit(){
   this.service.get1().subscribe((data)=>{
     this.f=data
+    
   })
 }
 

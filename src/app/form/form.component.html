@@ -1,0 +1,62 @@
+ <!-- <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div>
+        <label for="user">Username:</label>
+        <input type="text" name="User Name" id="" ngModel>
+    </div>
+    <div>
+        <label for="user">Password:</label>
+        <input type="password" name="Password" id="" ngModel>
+    </div>
+
+    <div>
+        <label for="user">Phno:</label>
+        <input type="tel" name="User Phno" id="" ngModel>
+    </div>
+
+    <div ngModelGroup="Address">
+        
+    <div>
+        <label for="user">City:</label>
+        <input type="tel" name="City" id="" ngModel>
+    </div>
+
+    <div>
+        <label for="user">District:</label>
+        <input type="tel" name="District" id="" ngModel>
+    </div>
+
+    <div>
+        <label for="user">State:</label>
+        <select name="State" id="" ngModel >
+            <option [value] ="country" *ngFor="let country of Countries" selected>{{country}}</option>
+        </select>
+    </div>
+
+    </div>
+
+
+    <div>
+        <button type="submit">Submit</button>
+        <button (click)="reset(form)">Reset</button>
+    </div>
+
+ </form>     -->
+
+<!-- 
+
+ <h4>User Name:{{form.value | json}}</h4>
+ <h4>Valid:{{form.touched}}</h4>
+ <h4>Valid:{{form.dirty}}</h4> -->
+
+
+
+
+ <form action="" #newform="ngForm" (ngSubmit)="submit(newform)">
+
+    <input type="text" name="user" ngModel>
+    <input type="text"  name="last" ngModel>
+    <input type="text" name="First" ngModel>
+
+<button>Submit</button>
+
+ </form>
