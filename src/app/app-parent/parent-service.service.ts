@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { throwError } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +10,7 @@ import { Injectable } from '@angular/core';
 
 export class ParentServiceService {
 
-  constructor() { }
+  constructor(private ser:HttpClient){}
 
 
 n=[
@@ -25,7 +29,13 @@ n=[
     name:'Kaveri',
     place:'Talakadu'
   },
-]
+];
+
+  get1(){
+    return this.ser.get('https://fakestoreapi.com/products?limit=5')
+  }
 
 
-}
+
+
+  }

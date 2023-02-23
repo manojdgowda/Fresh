@@ -45,12 +45,20 @@ export class AppParentComponent {
   }
 
 d='';
-e:any
+e:any;
+f:any;
 
 constructor(private service:ParentServiceService){}
-ngOnInit():void{
-  this.e=this.service.n
-}
+// ngOnInit():void{
+//   this.e=this.service.n
+// }
 
+
+
+ngOnInit(){
+  this.service.get1().subscribe((data)=>{
+    this.f=data
+  })
+}
 
 }
