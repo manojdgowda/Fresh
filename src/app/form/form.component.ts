@@ -70,7 +70,7 @@ export class FormComponent {
         sub.next('Manoj')
       },1000)
     })
-    obser.subscribe(result=>{console.log(result)})
+    // obser.subscribe(result=>{console.log(result)})
 
   }
 
