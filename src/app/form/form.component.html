@@ -48,8 +48,8 @@
  <h4>Valid:{{form.touched}}</h4>
  <h4>Valid:{{form.dirty}}</h4> -->
 
-
-
+<!-- 
+ 
 
  <form action="" #newform="ngForm" (ngSubmit)="submit(newform)">
 
@@ -59,4 +59,55 @@
 
 <button>Submit</button>
 
+ </form> -->
+
+
+
+
+
+ <!-- Reactive Forms  -->
+
+
+<!-- 
+ <form action=""   [formGroup]="newName" (ngSubmit)="onsubmit()">
+    Name: <input type="text"  [formControl]="Nice">
+    newName: <input type="text" formControlName="Name">
+    Des: <input type="text" name="" id="" formControlName="Designation">
+    <button (click)="update()">Click</button>
  </form>
+
+<h1>{{Nice.value}}</h1> -->
+
+
+
+<!-- 
+<form action="" [formGroup]="Manoj1" (ngSubmit)="onsubmit()">
+    <input type="text" formControlName="Name">
+    <input type="text" formControlName="Role">
+    <input type="text" formControlName="Manoj">
+
+
+<button type="submit">Submit</button>
+</form> -->
+
+<!-- 
+
+<form action="" [formGroup]="Manoj" (ngSubmit)="onsubmit()" >
+    <input type="text" formControlName="Username">
+    <input type="text" formControlName="Email">
+    <input type="text" formControlName="Ph">
+    <input type="text" [formControl]="man" name="name">
+    <p>{{a}}</p>
+    <button *ngIf="a;else mn" (disabled)="disabled()">Submit</button>
+
+</form> 
+<ng-template #mn>
+    <button (disable)="enable()">Reset </button>
+</ng-template> -->
+
+
+
+
+
+
+
