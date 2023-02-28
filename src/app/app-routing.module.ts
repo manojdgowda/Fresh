@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppChildComponent } from './app-child/app-child.component';
 import { AppParentComponent } from './app-parent/app-parent.component';
 import { FormComponent } from './form/form.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 const routes: Routes = [
   {path:'app-parent',component:AppParentComponent},
   {path:'app-child',component:AppChildComponent},
   {path:'',component:AppParentComponent},
-  {path:'form',component:FormComponent}
+  {path:'form',component:FormComponent},
+  { path:'life',component:LifecyclehooksComponent }
   
 ];
 
@@ -18,4 +20,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const route=[AppParentComponent,AppChildComponent,FormComponent]
+export const route=[AppParentComponent,AppChildComponent,FormComponent,LifecyclehooksComponent]

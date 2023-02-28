@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component ,OnInit} from '@angular/core';
 import { ParentServiceService } from './parent-service.service';
+import { hooks1 } from './hoo';
 
 @Component({
   selector: 'app-app-parent',
@@ -34,6 +35,7 @@ export class AppParentComponent {
     
   ]
   c=[];
+  type: any;
   fromchild(data){
     this.c=data
   }
@@ -62,5 +64,67 @@ ngOnInit(){
     
   })
 }
+
+
+
+//hooks
+
+hooks:any
+handler(data){
+this.hooks=data.target.value
+}
+
+
+Manoj:string;
+Ph:number
+manu:hooks1=new hooks1()
+
+
+godjob(){
+  this.manu=new hooks1()
+  this.manu.Manoj=this.Manoj
+  this.manu.PhNo=this.Ph
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
