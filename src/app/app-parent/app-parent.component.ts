@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component ,OnInit} from '@angular/core';
+import { Component ,OnInit,DoCheck} from '@angular/core';
 import { ParentServiceService } from './parent-service.service';
 import { hooks1 } from './hoo';
 
@@ -69,7 +69,7 @@ ngOnInit(){
 
 //hooks
 
-hooks:any
+hooks='green'
 handler(data){
 this.hooks=data.target.value
 }

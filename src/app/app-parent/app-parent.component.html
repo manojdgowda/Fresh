@@ -76,14 +76,18 @@
 
 
 
-<app-lifecyclehooks [parent]="hooks"   [pare]="manu"></app-lifecyclehooks>
+<app-lifecyclehooks [parent]="hooks"   [pare]="manu">
+   <h1 #mano> Manoj D Gowda </h1>
+</app-lifecyclehooks>
 
-<input type="text"   (blur)="handler($event)"   name="" id="">
+<input type="text"   (blur)="handler($event)"   name="" id=""> <br><br>
 
 
 <div>  
-    <input type="text" name="" id="" [(ngModel)]="Manoj">
-    <input type="text" name="" id="" [(ngModel)]="Ph">
+    <input type="text" name="" id="" [(ngModel)]="Manoj"> <br>
+    <input type="text" name="" id="" [(ngModel)]="Ph"><br><br>
+
     <button type="submit" (click)="godjob()"> Upadte Button</button>
 
 </div>
+<br><br>
